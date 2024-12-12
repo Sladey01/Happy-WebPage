@@ -24,12 +24,70 @@
         h1 {
             color: #ff6b6b;
         }
+        .quote-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f0f9ff;
+            border-radius: 8px;
+        }
+        .kindness-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #fff0f4;
+            border-radius: 8px;
+        }
+        .message-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        .message-button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to Our Happy Place! 😊</h1>
         <p>This is a space dedicated to spreading joy and positivity.</p>
+        
+        <div class="quote-section">
+            <h2>💭 Daily Inspiration</h2>
+            <p>"Happiness is not something ready made. It comes from your own actions." - Dalai Lama</p>
+            <p>"The most wasted of all days is one without laughter." - E.E. Cummings</p>
+        </div>
+
+        <div class="kindness-section">
+            <h2>🌸 Spread Kindness</h2>
+            <p>Today's Challenge: Perform a random act of kindness!</p>
+            <ul style="list-style: none; padding: 0;">
+                <li>👋 Give someone a compliment</li>
+                <li>😊 Share your smile with others</li>
+                <li>💖 Help someone in need</li>
+            </ul>
+        </div>
+
+        <button class="message-button" onclick="showRandomMessage()">🎉 Click for Joy!</button>
+        <p id="random-message"></p>
     </div>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "You're awesome!",
+                "Today is a great day!",
+                "Keep spreading happiness!",
+                "Your smile makes the world brighter!",
+                "You make a difference!"
+            ];
+            const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+            document.getElementById('random-message').textContent = randomMessage;
+        }
+    </script>
 </body>
 </html>
